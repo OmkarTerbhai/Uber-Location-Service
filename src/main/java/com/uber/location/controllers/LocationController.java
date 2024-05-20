@@ -31,7 +31,7 @@ public class LocationController {
 
     @PostMapping("/nearby")
     public ResponseEntity<List<SaveDriverLocationDto>> getNearByDrivers(@RequestBody NearbyDriversDto nearbyDriversDto) {
-
+        System.out.println("Reached getNearByDrivers");
         List<SaveDriverLocationDto> response = this.driverLocationService.getNearByDrivers(nearbyDriversDto);
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
